@@ -162,17 +162,55 @@ public class BasicGameApp implements Runnable, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
+
 		//System.out.println("pressed?");
 		//System.out.println(e.getKeyChar());
 		System.out.println(e.getKeyCode());
 		//up: 38
+		if(e.getKeyCode()==38){
+			System.out.println("Up");
+			astro.isUp=true;
+		}
 		//left: 37
+		if(e.getKeyCode()==37){
+			System.out.println("left");
+			astro.isLeft=true;
+		}
 		//right: 39
+		if(e.getKeyCode()==39){
+			System.out.println("right");
+			astro.isRight=true;
+		}
 		//down: 40
+		if(e.getKeyCode()==40){
+			System.out.println("down");
+			astro.isDown=true;
+		}
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {
+
+		if(e.getKeyCode()==38){
+			System.out.println("Up");
+			astro.isUp=false;
+
+		}
+		//left: 37
+		if(e.getKeyCode()==37){
+			System.out.println("left");
+			astro.isLeft=false;
+		}
+		//right: 39
+		if(e.getKeyCode()==39){
+			System.out.println("right");
+			astro.isRight=false;
+		}
+		//down: 40
+		if(e.getKeyCode()==40){
+			System.out.println("down");
+			astro.isDown=false;
+		}
 
 	}
 	///step 3: add method, keyReleased,keyPressed, and keyTyped
