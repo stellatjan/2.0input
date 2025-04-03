@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 
 //*******************************************************************************
-// Class Definition Section
+// Class definition section
 ///step 1 add KeyListener to implements
 public class BasicGameApp implements Runnable, KeyListener {
 
