@@ -211,7 +211,6 @@ public class BasicGameApp implements Runnable, KeyListener {
 
 		@Override
 		public void keyReleased (KeyEvent e){
-
 			if (e.getKeyCode() == 38) {
 				System.out.println("Up");
 				astro.isUp = false;
