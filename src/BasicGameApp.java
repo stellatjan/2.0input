@@ -73,7 +73,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 
 
 //*******************************************************************************
-//User Method Section
+//user Method Section
 //
 // put your code to do things here.
 
