@@ -26,9 +26,9 @@ import javax.swing.JPanel;
 ///step 1 add KeyListener to implements
 public class BasicGameApp implements Runnable, KeyListener {
 
-	//Variable Definition Section
-	//Declare the variables used in the program
-	//You can set their initial values too
+	//variable definition section
+	//declare the variables used in the program
+	//you can set their initial values too
 
 	//Sets the width and height of the program window
 	final int WIDTH = 1000;
