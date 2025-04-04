@@ -40,7 +40,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 	public JPanel panel;
 
 	public BufferStrategy bufferStrategy;
-	public Image astroPic;
+	public Image DVDPic;
 
 	//Declare the objects used in the program
 	//These are things that are made up of more than one variable type
@@ -65,7 +65,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 
 		//variable and objects
 		//create (construct) the objects needed for the game and load up
-		astroPic = Toolkit.getDefaultToolkit().getImage("astronaut.png"); //load the picture
+		DVDPic = Toolkit.getDefaultToolkit().getImage("DVD.png"); //load the picture
 		astro = new Astronaut(10, 100);
 
 
@@ -147,7 +147,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 		g.clearRect(0, 0, WIDTH, HEIGHT);
 
 		//draw the image of the astronaut
-		g.drawImage(astroPic, astro.xpos, astro.ypos, astro.width, astro.height, null);
+		g.drawImage(DVDPic, astro.xpos, astro.ypos, astro.width, astro.height, null);
 
 		g.dispose();
 
