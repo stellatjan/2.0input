@@ -47,7 +47,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 	private Astronaut astro;
 
 	//Step 1: make astro array
-	Astronaut[] space_station = new Astronaut[5000];
+	Astronaut[] space_station = new Astronaut[5];
 
 
 	// Main method definition
@@ -107,6 +107,44 @@ public class BasicGameApp implements Runnable, KeyListener {
 			space_station[y].move();
 
 		}
+
+		if (astro.xpos < space_station[0].xpos + space_station[0].width &&
+				astro.xpos + astro.width > space_station[0].xpos &&
+				astro.ypos < space_station[0].ypos + space_station[0].height &&
+				astro.ypos + astro.height > space_station[0].ypos) {
+			System.out.println("Collision!");
+		}
+
+		if (astro.xpos < space_station[1].xpos + space_station[1].width &&
+				astro.xpos + astro.width > space_station[1].xpos &&
+				astro.ypos < space_station[1].ypos + space_station[1].height &&
+				astro.ypos + astro.height > space_station[1].ypos) {
+			System.out.println("Collision!");
+		}
+
+// ...and so on
+
+		if (astro.xpos < space_station[2].xpos + space_station[2].width &&
+				astro.xpos + astro.width > space_station[2].xpos &&
+				astro.ypos < space_station[2].ypos + space_station[2].height &&
+				astro.ypos + astro.height > space_station[2].ypos) {
+			System.out.println("Collision!");
+		}
+
+		if (astro.xpos < space_station[3].xpos + space_station[3].width &&
+				astro.xpos + astro.width > space_station[3].xpos &&
+				astro.ypos < space_station[3].ypos + space_station[3].height &&
+				astro.ypos + astro.height > space_station[3].ypos) {
+			System.out.println("Collision!");
+		}
+
+		if (astro.xpos < space_station[4].xpos + space_station[4].width &&
+				astro.xpos + astro.width > space_station[4].xpos &&
+				astro.ypos < space_station[4].ypos + space_station[4].height &&
+				astro.ypos + astro.height > space_station[4].ypos) {
+			System.out.println("Collision!");
+		}
+
 	}
 
 	//Pauses or sleeps the computer for the amount specified in milliseconds
