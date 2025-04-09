@@ -46,6 +46,9 @@ public class BasicGameApp implements Runnable, KeyListener {
 	//These are things that are made up of more than one variable type
 	private Astronaut astro;
 
+	//Step 1: make astro array
+	Astronaut[] space_station = new Astronaut[5000];
+
 
 	// Main method definition
 	// This is the code that runs first and automatically
@@ -61,6 +64,7 @@ public class BasicGameApp implements Runnable, KeyListener {
 	// Initialize your variables and construct your program objects here.
 	public BasicGameApp() {
 
+
 		setUpGraphics();
 
 		//variable and objects
@@ -68,7 +72,10 @@ public class BasicGameApp implements Runnable, KeyListener {
 		DVDPic = Toolkit.getDefaultToolkit().getImage("DVD.png"); //load the picture
 		astro = new Astronaut(10, 100);
 
+		for(int x=0; x< space_station.length; x++){
+			space_station[x]= new Astronaut((int)(Math.random()*900), (int)(Math.random()*600));
 
+		}
 	}// BasicGameApp()
 
 
@@ -95,6 +102,11 @@ public class BasicGameApp implements Runnable, KeyListener {
 		//calls the move( ) code in the objects
 		astro.move();
 
+		//step 3 move astro array
+		for(int y=0;y<space_station.length;y++){
+			space_station[y].move();
+
+		}
 	}
 
 	//Pauses or sleeps the computer for the amount specified in milliseconds
@@ -149,6 +161,12 @@ public class BasicGameApp implements Runnable, KeyListener {
 		//draw the image of the astronaut
 		g.drawImage(DVDPic, astro.xpos, astro.ypos, astro.width, astro.height, null);
 
+
+		//step 4: render astro array
+		for(int z=0; z<space_station.length; z++){
+			g.drawImage(DVDPic, space_station[z].xpos, space_station[z].ypos, space_station[z].width, space_station[z].height, null);
+
+		}
 		g.dispose();
 
 		bufferStrategy.show();
